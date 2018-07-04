@@ -1,0 +1,30 @@
+// MIXINS
+
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 10) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+@mixin big-phone {
+  @media (min-width: $big-phone-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin min-screen-height($min-height) {
+	@media (min-height: $min-height) {
+		@content;
+	}
+}
