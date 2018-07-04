@@ -25,20 +25,6 @@ gulp.task('sass', function(done) {
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./build/css'));
 
-  gulp
-    .src('./sass/style-stretch.scss', { sourcemaps: true })
-    .pipe(prettyError())
-    .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ['last 2 versions']
-      })
-    )
-    .pipe(gulp.dest('./build/css'))
-    .pipe(cssnano())
-    .pipe(rename('style-stretch.min.css'))
-    .pipe(gulp.dest('./build/css'));
-
   done();
 });
 
@@ -77,7 +63,7 @@ gulp.task('browser-sync', function() {
   });
 
   gulp
-    .watch(['build/css/*.css', 'build/js/*.js'])
+    .watch(['build/css/*.css', 'build/js/*.js', 'index.html'])
     .on('change', browserSync.reload);
 });
 
