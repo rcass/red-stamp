@@ -2,20 +2,4 @@
 /* Footer */
 /*-----------------------------------------*/
 
-.site-footer {
-   color: $med-grey;
-   @include font-size(.9);
-   margin-bottom: $base-space-unit * 3;
-   text-align: center;
-   padding: 0 ($base-space-unit * 2);
 
-   @include desktop {
-      text-align: left;
-   }
-}
-
-.copyright {
-   span {
-      text-transform: uppercase;
-   }
-}
