@@ -222,7 +222,8 @@ header.inner-container {
     margin-right: auto;
 
   }
-  .feature-text {
+  .feature-text-container {
+    position: relative;
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0 1rem 2rem;  //40px
@@ -230,12 +231,34 @@ header.inner-container {
     @include tablet {
       margin-left: 40px;
       margin-right: 40px;
+      
     }
   }
   p, h3 {
     padding: 0 15px;
   }
 }
+.feature-text {
+  @include tablet {
+    margin-left: 100px;
+    
+  }
+}
+
+.rect-decoration {
+  display: none;
+  @include tablet {
+    width: 64px;
+    height: 1px;
+    opacity: 0.47;
+    background-color: $bluish-grey;
+    display: inherit;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+  }
+}
+
 .image-container {
   width: 100%;
   background-color: $white;

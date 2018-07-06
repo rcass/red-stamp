@@ -517,18 +517,36 @@ header.inner-container {
   margin-left: auto;
   margin-right: auto; }
 
-.feature-content .feature-text {
+.feature-content .feature-text-container {
+  position: relative;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin: 0 1rem 2rem;
   background-color: #ffffff; }
   @media (min-width: 600px) {
-    .feature-content .feature-text {
+    .feature-content .feature-text-container {
       margin-left: 40px;
       margin-right: 40px; } }
 
 .feature-content p, .feature-content h3 {
   padding: 0 15px; }
+
+@media (min-width: 600px) {
+  .feature-text {
+    margin-left: 100px; } }
+
+.rect-decoration {
+  display: none; }
+  @media (min-width: 600px) {
+    .rect-decoration {
+      width: 64px;
+      height: 1px;
+      opacity: 0.47;
+      background-color: #85939e;
+      display: inherit;
+      position: absolute;
+      top: 60px;
+      left: 30px; } }
 
 .image-container {
   width: 100%;
