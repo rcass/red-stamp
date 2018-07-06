@@ -440,39 +440,15 @@ p {
   letter-spacing: -0.1px; }
 
 /*-----------------------------------------*/
-/* Header */
+/* Background */
 /*-----------------------------------------*/
-.logo-area {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .logo-area h5 {
-    display: inline-block;
-    padding: 2rem 0; }
-  .logo-area img {
-    padding: 2rem 0; }
-  @media (min-width: 600px) {
-    .logo-area {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      width: 100%; } }
+body {
+  background: linear-gradient(90deg, #ffffff 18px, transparent 1%) center, linear-gradient(#ffffff 18px, transparent 1%) center, #d8d8d8;
+  background-size: 20px 20px; }
 
-.container {
-  max-width: 560px;
-  background-color: pink;
-  border: 2px black solid; }
-
-.inner-container {
-  padding: 0 2em; }
-
+/*-----------------------------------------*/
+/* Container Styles */
+/*-----------------------------------------*/
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,6 +460,53 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.container {
+  margin: 2.5rem;
+  max-width: 600px;
+  background-color: #f7f8f9;
+  border: 2px black solid; }
+
+.inner-container {
+  padding: 0 2em;
+  color: white; }
+
+/*-----------------------------------------*/
+/* Header */
+/*-----------------------------------------*/
+.logo-area {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #ffffff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .logo-area h5 {
+    display: inline-block;
+    margin: 2rem 0; }
+  .logo-area img {
+    padding: 2rem 0; }
+  @media (min-width: 600px) {
+    .logo-area {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%; } }
+
+.newsletter-opener {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .newsletter-opener div {
+    width: 50%; }
 
 /*-----------------------------------------*/
 /* Header */
