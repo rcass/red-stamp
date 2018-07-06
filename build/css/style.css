@@ -120,8 +120,8 @@ a img {
 
 @font-face {
   font-family: 'Alright Sans';
-  src: url("AlrightSans-Medium.eot");
-  src: url("AlrightSans-Medium.eot?#iefix") format("embedded-opentype"), url("AlrightSans-Medium.woff2") format("woff2"), url("AlrightSans-Medium.ttf") format("truetype"), url("AlrightSans-Medium.svg#AlrightSans-Medium") format("svg");
+  src: url("../../fonts/AlrightSans-Medium.eot");
+  src: url("../../fonts/AlrightSans-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/AlrightSans-Medium.woff2") format("woff2"), url("../../fonts/AlrightSans-Medium.ttf") format("truetype"), url("../../fonts/AlrightSans-Medium.svg#AlrightSans-Medium") format("svg");
   font-weight: 500;
   font-style: normal; }
 
@@ -536,7 +536,7 @@ header.inner-container {
   .action-section h3 {
     font-family: "Alright Sans", sans-serif;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -572,6 +572,62 @@ header.inner-container {
     .action-item a:hover {
       text-decoration: underline;
       color: #0a273c; }
+
+/*-----------------------------------------*/
+/* Blog Posts Section */
+/*-----------------------------------------*/
+.blog-posts {
+  text-align: center;
+  color: #0a273c; }
+  .blog-posts h2 {
+    font-family: "Tiempos Text", serif;
+    font-size: 25px; }
+  .blog-posts h3 {
+    font-size: 14px;
+    font-family: "Alright Sans", sans-serif;
+    font-weight: 300; }
+  .blog-posts ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  .blog-posts li {
+    width: 100%;
+    background-color: #ffffff;
+    border: solid 1px #f7f8f9; }
+    @media (min-width: 480px) {
+      .blog-posts li {
+        max-width: 242px; } }
+
+/*-----------------------------------------*/
+/* Footer Section */
+/*-----------------------------------------*/
+.bottom-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ec5447;
+  height: 50px;
+  font-size: 14px;
+  font-family: "Alright Sans", sans-serif;
+  font-weight: 300; }
+  .bottom-banner a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: regular; }
 
 /*-----------------------------------------*/
 /* Header */
