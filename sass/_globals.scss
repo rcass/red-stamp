@@ -354,13 +354,15 @@ header.inner-container {
 /*-----------------------------------------*/
 /* Footer Section */
 /*-----------------------------------------*/
+footer {
+  // background-color: magenta;
+}
 .bottom-banner {
   display: flex;
   align-items: center;
   color: $white;
   justify-content: center;
   background-color: $tomato;
-  
   font-size: 14px;
   font-family: $alright;
   font-weight: 300;
@@ -384,4 +386,52 @@ header.inner-container {
     font-weight: regular;
   }
   
+}
+.social{
+ display: flex;
+ li {
+   margin: 5px;
+ }
+}
+
+.upper-footer {
+  border-bottom: 1px $pale-grey-two solid;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px 44px;
+  align-items: center
+}
+
+.lower-footer {
+  padding-top: 36px;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  p {
+    display: inline-block;
+    color: $bluish-grey;
+    opacity: 0.5;
+    font-size: 12px;
+  }
+  img {
+    margin-top: 35px;
+    margin-bottom: 74px;
+  }
+}
+
+.footer-links {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  p {
+    padding: 0 20px;
+    
+  }
+
+  a {
+    color: $dark-indigo;
+    font-size: 12px;
+    text-decoration: none;
+  }
 }
