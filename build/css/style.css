@@ -345,6 +345,10 @@ img {
   height: auto;
   max-width: 100%; }
 
+a {
+  color: #ec5447;
+  text-decoration: none; }
+
 /*-----------------------------------------*/
 /* Global */
 /*-----------------------------------------*/
@@ -360,11 +364,13 @@ body {
 .logo-area h5 a {
   color: #ec5447;
   font-size: 10px;
-  font-weight: normal;
+  font-weight: 300;
+  font-family: "Alright Sans", sans-serif;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: normal; }
+  letter-spacing: normal;
+  text-decoration: none; }
 
 h1 {
   font-family: "Tiempos Text", serif;
@@ -476,7 +482,8 @@ header.inner-container {
   background-color: #ffffff;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  margin-bottom: 30px; }
   .logo-area h5 {
     display: inline-block;
     margin: 2rem 0; }
@@ -497,7 +504,12 @@ header.inner-container {
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  margin-bottom: 35px; }
+  .newsletter-opener div h1 {
+    margin-bottom: 19px; }
+  .newsletter-opener div p {
+    line-height: 1.21; }
   @media (min-width: 600px) {
     .newsletter-opener div {
       width: 50%; } }
@@ -525,11 +537,16 @@ header.inner-container {
   background-color: #ffffff; }
   @media (min-width: 600px) {
     .feature-content .feature-text-container {
-      margin-left: 40px;
-      margin-right: 40px; } }
+      margin-left: 44px;
+      margin-right: 44px;
+      padding-bottom: 34px;
+      padding-right: 25px; } }
 
 .feature-content p, .feature-content h3 {
   padding: 0 15px; }
+
+.feature-content p:nth-of-type(2) {
+  padding-bottom: 16px; }
 
 @media (min-width: 600px) {
   .feature-text {
@@ -565,7 +582,8 @@ header.inner-container {
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: center; }
+    text-align: center;
+    padding-top: 20px; }
   .action-section h3 {
     font-family: "Alright Sans", sans-serif;
     font-size: 14px;
@@ -574,7 +592,8 @@ header.inner-container {
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 30px; }
 
 .action-item {
   -webkit-box-align: center;
@@ -654,6 +673,9 @@ header.inner-container {
 /*-----------------------------------------*/
 /* Footer Section */
 /*-----------------------------------------*/
+footer {
+  background-color: #ffffff; }
+
 .bottom-banner {
   display: -webkit-box;
   display: -ms-flexbox;

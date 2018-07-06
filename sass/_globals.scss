@@ -26,7 +26,10 @@ img {
   height: auto;
   max-width: 100%;
 }
-
+ a {
+   color: $tomato;
+   text-decoration: none;
+ }
 /*-----------------------------------------*/
 /* Global */
 /*-----------------------------------------*/
@@ -46,11 +49,13 @@ body {
   h5 a{
     color: $tomato;
     font-size: 10px;
-    font-weight: normal;
+    font-weight: 300;
+    font-family: $alright;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
+    text-decoration: none;
   }
 }
 
@@ -171,8 +176,8 @@ header.inner-container {
    display: flex;
    flex-wrap: wrap;
    background-color: $white;
-   
    justify-content: space-between;
+   margin-bottom: 30px;
 
    h5 {
      display: inline-block;
@@ -193,15 +198,21 @@ header.inner-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 35px;
   div{
-    
+
+    h1 {
+      margin-bottom: 19px;
+    }
+    p {
+      line-height: 1.21;
+    }
     @include tablet {
       width: 50%;
     }
   }
   img {
     display: none;
-
     @include tablet {
       max-width: 100%;
       display: inherit;
@@ -229,14 +240,19 @@ header.inner-container {
     margin: 0 1rem 2rem;  //40px
     background-color: $white;
     @include tablet {
-      margin-left: 40px;
-      margin-right: 40px;
-      
+      margin-left: 44px;
+      margin-right: 44px;
+      padding-bottom: 34px;
+      padding-right: 25px;
     }
   }
   p, h3 {
     padding: 0 15px;
   }
+  p:nth-of-type(2) {
+    padding-bottom: 16px;
+  }
+
 }
 .feature-text {
   @include tablet {
@@ -279,6 +295,7 @@ header.inner-container {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
+    padding-top: 20px;
   }
   h3 {
     font-family: $alright;
@@ -289,6 +306,7 @@ header.inner-container {
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
+    padding-bottom: 30px;
   }
 }
 
@@ -378,7 +396,7 @@ header.inner-container {
 /* Footer Section */
 /*-----------------------------------------*/
 footer {
-  // background-color: magenta;
+  background-color: $white;
 }
 .bottom-banner {
   display: flex;
