@@ -113,8 +113,8 @@ a img {
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: url("TiemposText-Medium.eot");
-  src: url("TiemposText-Medium.eot?#iefix") format("embedded-opentype"), url("TiemposText-Medium.woff2") format("woff2"), url("TiemposText-Medium.ttf") format("truetype"), url("TiemposText-Medium.svg#TiemposText-Medium") format("svg");
+  src: url("../../fonts/TiemposText-Medium.eot");
+  src: url("../../fonts/TiemposText-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/TiemposText-Medium.woff2") format("woff2"), url("../../fonts/TiemposText-Medium.ttf") format("truetype"), url("../../fonts/TiemposText-Medium.svg#TiemposText-Medium") format("svg");
   font-weight: 500;
   font-style: normal; }
 
@@ -246,8 +246,8 @@ a img {
 
 @font-face {
   font-family: 'Alright Sans';
-  src: url("AlrightSans-Ultra.eot");
-  src: url("AlrightSans-Ultra.eot?#iefix") format("embedded-opentype"), url("AlrightSans-Ultra.woff2") format("woff2"), url("AlrightSans-Ultra.ttf") format("truetype"), url("AlrightSans-Ultra.svg#AlrightSans-Ultra") format("svg");
+  src: url("../../fonts/AlrightSans-Ultra.eot");
+  src: url("../../fonts/AlrightSans-Ultra.eot?#iefix") format("embedded-opentype"), url("../../fonts/AlrightSans-Ultra.woff2") format("woff2"), url("../../fonts/AlrightSans-Ultra.ttf") format("truetype"), url("../../fonts/AlrightSans-Ultra.svg#AlrightSans-Ultra") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -349,35 +349,11 @@ img {
 /* Global */
 /*-----------------------------------------*/
 html {
-  font-size: 16px; }
+  font-size: 12px; }
 
 body {
-  background-color: white;
   height: 100vh; }
 
-/* Typography */
-body,
-button,
-input {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 8px;
-  font-size: 0.8rem; }
-  @media (min-width: 600px) {
-    body,
-    button,
-    input {
-      font-size: 9px;
-      font-size: 0.9rem; } }
-  @media (min-width: 1000px) {
-    body,
-    button,
-    input {
-      font-size: 10px;
-      font-size: 1rem; } }
-
-/*-----------------------------------------*/
-/* Helpers */
-/*-----------------------------------------*/
 /*-----------------------------------------*/
 /* Typography */
 /*-----------------------------------------*/
@@ -416,7 +392,8 @@ header h2 {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-top: 1rem; }
 
 .feature-content h3 {
   color: #0a273c;
@@ -426,14 +403,16 @@ header h2 {
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: normal; }
+  letter-spacing: normal;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 p {
   color: #0a273c;
   font-family: "Alright Sans", sans-serif;
   opacity: 0.73;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.36;
@@ -462,18 +441,26 @@ body {
           align-items: center; }
 
 .container {
-  margin: 2.5rem;
+  margin: 1rem;
   max-width: 600px;
   background-color: #f7f8f9;
   border: 2px black solid; }
+  @media (min-width: 600px) {
+    .container {
+      margin: 2rem; } }
+  @media (min-width: 1000px) {
+    .container {
+      margin: 2.5rem; } }
 
 .inner-container {
-  padding: 0 2em;
-  color: white; }
+  padding: 0 1.25rem 1.5rem; }
 
 /*-----------------------------------------*/
 /* Header */
 /*-----------------------------------------*/
+header.inner-container {
+  background-color: white; }
+
 .logo-area {
   -ms-flex-line-pack: center;
       align-content: center;
@@ -502,11 +489,89 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  .newsletter-opener div {
-    width: 50%; }
+  @media (min-width: 600px) {
+    .newsletter-opener div {
+      width: 50%; } }
+  .newsletter-opener img {
+    display: none; }
+    @media (min-width: 600px) {
+      .newsletter-opener img {
+        width: 50%;
+        display: inherit; } }
+
+/*-----------------------------------------*/
+/* Feature Content Section */
+/*-----------------------------------------*/
+.feature-content img {
+  background-color: #ffffff; }
+
+.feature-content div {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0 1rem 2rem;
+  background-color: #ffffff; }
+
+.feature-content p, .feature-content h3 {
+  padding: 0 15px; }
+
+/*-----------------------------------------*/
+/* Action Section */
+/*-----------------------------------------*/
+.action-section {
+  color: #0a273c; }
+  .action-section h2 {
+    font-family: "Tiempos Text", serif;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center; }
+  .action-section h3 {
+    font-family: "Alright Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center; }
+
+.action-item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  font-family: "Alright Sans", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+  padding: 1rem .25rem;
+  border: 1px #f7f8f9 solid; }
+  .action-item div {
+    padding-left: 20px; }
+  .action-item h4 {
+    font-weight: bold;
+    margin-bottom: .5rem; }
+  .action-item p:first-of-type {
+    margin-bottom: .5rem;
+    color: #85939e;
+    font-size: 12px; }
+  .action-item a {
+    color: #60cbe2;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-decoration: none; }
+    .action-item a:hover {
+      text-decoration: underline;
+      color: #0a273c; }
 
 /*-----------------------------------------*/
 /* Header */

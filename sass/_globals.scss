@@ -32,63 +32,16 @@ img {
 /*-----------------------------------------*/
 
 html {
-  font-size: 16px;
+  font-size: $base-font-size;
 }
 
 body {
-  background-color: white;
   height: 100vh;
 }
 
-/* Typography */
-
-body,
-button,
-input {
-  font-family: 'Open Sans', sans-serif;
-  @include font-size(.8);
-
-  @include tablet {
-    @include font-size(.9);
-  }
-
-  @include desktop {
-    @include font-size(1);
-  }
-}
-
-/*-----------------------------------------*/
-/* Helpers */
-/*-----------------------------------------*/
-
-// .container {  
-//   display: flex;
-//   flex-direction: column;
-//   height: 100%;
-//   justify-content: space-between;
-//   margin: 0 auto;
-//   max-width: 1600px;
-//   width: 100%;
-// }
-
-// .screen-reader {
-//   border: 0;
-//   clip: rect(0 0 0 0);
-//   height: 1px;
-//   margin: -1px;
-//   overflow: hidden;
-//   padding: 0;
-//   position: absolute;
-//   width: 1px;
-// }
-
 /*-----------------------------------------*/
 /* Typography */
 /*-----------------------------------------*/
-$tiempos-text: 'Tiempos Text', serif;
-$alright: 'Alright Sans', sans-serif;
-$tiempos-headline: 'Tiempos Headline', serif;
-
 .logo-area {
   h5 a{
     color: $tomato;
@@ -132,6 +85,7 @@ header h2 {
   line-height: normal;
   letter-spacing: normal;
   text-transform: uppercase;
+  margin-top: 1rem;
 }
 
 .feature-content h3{
@@ -143,6 +97,8 @@ header h2 {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -150,7 +106,7 @@ p {
   font-family: $alright; 
   opacity: 0.73;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.36;
@@ -180,15 +136,21 @@ body {
 }
 
 .container {
-  margin: 2.5rem;
+  margin: 1rem;
   max-width: 600px;
   background-color: $pale-grey;
   border: 2px black solid;
+  @include tablet {
+    margin: 2rem;
+  }
+  @include desktop {
+    margin: 2.5rem;
+  }
 }
 
 .inner-container{
-  padding: 0 2em;
-  color: white;
+  padding: 0 1.25rem 1.5rem;  //40px
+  // background-color: $white;
 }
 
 
@@ -196,6 +158,10 @@ body {
 /*-----------------------------------------*/
 /* Header */
 /*-----------------------------------------*/
+header.inner-container {
+  background-color: white;
+}
+
 .logo-area {
    align-content: center;
    display: flex;
@@ -221,10 +187,101 @@ body {
 
 .newsletter-opener {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   div{
-    width: 50%;
+    
+    @include tablet {
+      width: 50%;
+    }
+  }
+  img {
+    display: none;
+
+    @include tablet {
+      width: 50%;
+      display: inherit;
+    }
   }
 }
 
 
+/*-----------------------------------------*/
+/* Feature Content Section */
+/*-----------------------------------------*/
+
+.feature-content {
+  img {
+    background-color: $white;
+  }
+  div {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 1rem 2rem;  //40px
+    background-color: $white;
+  }
+  p, h3 {
+    padding: 0 15px;
+  }
+}
+
+
+/*-----------------------------------------*/
+/* Action Section */
+/*-----------------------------------------*/
+.action-section {
+  color: $dark-indigo;
+  h2{
+    font-family: $tiempos-text;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  h3 {
+    font-family: $alright;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+}
+
+.action-item {
+  align-items: center;
+  background-color: $white;
+  font-family: $alright;
+  display: flex;
+  margin: 1rem 0;
+  padding: 1rem .25rem;
+  border: 1px $pale-grey solid;
+  div {
+    padding-left: 20px;
+  }
+  h4 {
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+  p:first-of-type {
+    margin-bottom: .5rem;
+    color: $bluish-grey;
+    font-size: 12px;
+  }
+  a {
+    color: $dark-sky-blue;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $dark-indigo;
+    }
+  }
+
+}
