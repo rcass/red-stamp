@@ -119,34 +119,6 @@ a img {
   font-style: normal; }
 
 /*-----------------------------------------*/
-/* Extra Resetting */
-/*-----------------------------------------*/
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none; }
-
-strong, b, strong *, b * {
-  font-style: normal;
-  font-weight: bold !important; }
-
-em, i, em *, i * {
-  font-style: italic; }
-
-fieldset,
-img,
-a img {
-  border: 0; }
-
-img {
-  height: auto;
-  max-width: 100%; }
-
-a {
-  color: #ec5447;
-  text-decoration: none; }
-
-/*-----------------------------------------*/
 /* Global */
 /*-----------------------------------------*/
 html {
@@ -154,6 +126,17 @@ html {
 
 body {
   height: 100vh; }
+
+a {
+  color: #ec5447;
+  text-decoration: none; }
+
+/*-----------------------------------------*/
+/* Background */
+/*-----------------------------------------*/
+body {
+  background: linear-gradient(90deg, #ffffff 18px, transparent 1%) center, linear-gradient(#ffffff 18px, transparent 1%) center, #d8d8d8;
+  background-size: 20px 20px; }
 
 /*-----------------------------------------*/
 /* Typography */
@@ -222,38 +205,19 @@ p {
   letter-spacing: -0.1px; }
 
 /*-----------------------------------------*/
-/* Background */
-/*-----------------------------------------*/
-body {
-  background: linear-gradient(90deg, #ffffff 18px, transparent 1%) center, linear-gradient(#ffffff 18px, transparent 1%) center, #d8d8d8;
-  background-size: 20px 20px; }
-
-/*-----------------------------------------*/
 /* Container Styles */
 /*-----------------------------------------*/
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
-.container {
+.newsletter-container {
   margin: 1rem;
   max-width: 600px;
   background-color: #f7f8f9;
   border: 1px #f7f8f9 solid; }
   @media (min-width: 600px) {
-    .container {
-      margin: 2rem; } }
+    .newsletter-container {
+      margin: 2rem auto; } }
   @media (min-width: 1000px) {
-    .container {
-      margin: 2.5rem; } }
+    .newsletter-container {
+      margin: 2.5rem auto; } }
 
 .inner-container {
   padding: 0 1.25rem 1.5rem; }
@@ -271,12 +235,12 @@ header.inner-container {
 .logo-area {
   -ms-flex-line-pack: center;
       align-content: center;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #ffffff;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -303,19 +267,22 @@ header.inner-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 35px; }
-  .newsletter-opener div h1 {
-    margin-bottom: 19px; }
-  .newsletter-opener div p {
-    line-height: 1.21; }
-  @media (min-width: 600px) {
-    .newsletter-opener div {
-      width: 50%; } }
   .newsletter-opener img {
     display: none; }
     @media (min-width: 600px) {
       .newsletter-opener img {
         max-width: 100%;
         display: inherit; } }
+
+.newsletter-opener-text h1 {
+  margin-bottom: 19px; }
+
+.newsletter-opener-text p {
+  line-height: 1.21; }
+
+@media (min-width: 600px) {
+  .newsletter-opener-text {
+    width: 50%; } }
 
 /*-----------------------------------------*/
 /* Feature Content Section */
@@ -364,7 +331,8 @@ header.inner-container {
 
 .image-container {
   width: 100%;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  overflow: hidden; }
 
 /*-----------------------------------------*/
 /* Action Section */
@@ -488,10 +456,7 @@ footer {
   font-size: 14px;
   font-family: "Alright Sans", sans-serif;
   font-weight: 300;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 1rem;
   line-height: 2rem;
   text-align: center;
   -webkit-box-orient: vertical;
@@ -508,9 +473,7 @@ footer {
     .bottom-banner {
       max-height: 50px; } }
   .bottom-banner a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: regular; }
+    color: #ffffff; }
 
 .social {
   display: -webkit-box;
@@ -560,15 +523,4 @@ footer {
     padding: 0 20px; }
   .footer-links a {
     color: #0a273c;
-    font-size: 12px;
-    text-decoration: none; }
-
-/*-----------------------------------------*/
-/* Header */
-/*-----------------------------------------*/
-/*-----------------------------------------*/
-/* Content */
-/*-----------------------------------------*/
-/*-----------------------------------------*/
-/* Footer */
-/*-----------------------------------------*/
+    font-size: 12px; }
